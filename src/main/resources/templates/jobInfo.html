@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <title>Post Job</title>
+</head>
+<body>
+<div layout:fragment="content" >
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Job Details</h1>
+            <form th:action="@{/employer/postJob}" method="post">
+                <div class="form-group">
+                    <label for="username">Job Title</label>:
+                    <input type="text"
+                           id="jobTitle"
+                           name="jobTitle"
+                           class="form-control"
+                           autofocus="autofocus"
+                           placeholder="Enter Job title">
+                </div>
+                <div class="form-group">
+                    <label for="jobDescription">Job Description</label>:
+                    <input type="textArea"
+                           id="jobDescription"
+                           name="jobDescription"
+                           class="form-control"
+                           placeholder="Enter Job description">
+                </div>
+                
+                 <div class="form-group">
+                    <label for="experience">Experience</label>:
+                    <input type="text"
+                           id="experience"
+                           name="experience"
+                           class="form-control"
+                           placeholder="Enter experience">
+                </div>
+                
+                <div class="form-group">
+                    <label for="salary">Salary</label>:
+                    <input type="text"
+                           id="salary"
+                           name="salary"
+                           class="form-control"
+                           placeholder="Enter Salary">
+                </div>
+                 <div class="form-group">
+                    <label for="keyWords">Key Words</label>:
+                    <input type="text"
+                           id="keyWords"
+                           name="keyWords"
+                           class="form-control"
+                           placeholder="Enter comma seperated key words">
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit"
+                                   name="jobPosting"
+                                   id="jobPosting"
+                                   class="form-control btn btn-info"
+                                   value="PostJob">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
